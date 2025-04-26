@@ -1,2 +1,1 @@
-Cambios en el readme
-intento 15 de cambio
+En este repositorio se va a usar para subir los laboratorios y tareas, proyectos y demas cosas que se vayan haciendo en el curso
