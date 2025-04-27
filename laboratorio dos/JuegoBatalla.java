@@ -5,7 +5,7 @@ public class JuegoBatalla {
     private Robot[] robots;
     private int cantidadRobots;
 
-    //contructor robot
+    //contructor 
     public JuegoBatalla(int capacidadMaxima) {
         robots = new Robot[capacidadMaxima]; //array de los robot
         cantidadRobots = 0; //contador de la cantidad de robot que se han creado
@@ -78,7 +78,7 @@ public class JuegoBatalla {
                     for (int j = i ; j < cantidadRobots - 1; j++) {
                         robots[j] = robots[j + 1];
                     }
-                    cantidadRobots--; //cuando un robot es movido este compueva el numero que robot que estan ahora en la lista despues de ser eliminado el que llego a cero
+                    cantidadRobots--; //cuando un robot es movido este comprueva el numero que robot que estan ahora en la lista despues de ser eliminado el que llego a cero
                     i--;
                 }
             }
@@ -107,7 +107,7 @@ public class JuegoBatalla {
     public  static void main(String[] args) {
         int cantidadMaxima = 6; //capacidad maxima de robot
         JuegoBatalla juego = new JuegoBatalla(cantidadMaxima);
-        
+
         //genera los robot
         juego.anadirRobort(new Robot("Leo", 90, 17));
         juego.anadirRobort(new Robot("Daniel", 85, 16));
