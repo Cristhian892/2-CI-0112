@@ -38,7 +38,6 @@ public class JuegoBatalla {
         this.cantidadRobots = cantidadRobots;
     }
 
-
     //inicio de batalla 
     public void iniciarBatalla() {
         if (cantidadRobots < 2 ) { //para la batalla minimo se ocupan dos robort
@@ -94,6 +93,7 @@ public class JuegoBatalla {
             } 
         } 
     }
+
     //muetra cual a sido el robot ganador 
         public void mostrarGanador() {
             if (cantidadRobots == 1) {
@@ -102,10 +102,12 @@ public class JuegoBatalla {
             System.out.println("La batalla terminó, pero nadie vivió para contarlo. ¿Ganó la crueldad de los algoritmos? ");
         }
     }
+
     //main del inicio de la batalla
     public  static void main(String[] args) {
         int cantidadMaxima = 6; //capacidad maxima de robot
         JuegoBatalla juego = new JuegoBatalla(cantidadMaxima);
+        
         //genera los robot
         juego.anadirRobort(new Robot("Leo", 90, 17));
         juego.anadirRobort(new Robot("Daniel", 85, 16));
@@ -113,6 +115,7 @@ public class JuegoBatalla {
         juego.anadirRobort(new Robot("Randal", 60, 20));
         juego.anadirRobort(new Robot("Jose", 92, 10));
         juego.anadirRobort(new Robot("Olman", 89, 12));
+
         //inicia la batalla
         juego.iniciarBatalla();
     }
