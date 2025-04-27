@@ -12,7 +12,7 @@ public class JuegoBatalla {
     }
 
     public void anadirRobort(Robot robot) {
-        if (cantidadRobots < robots.length) { //no agrega un robort si esta lleno el array
+        if (cantidadRobots < robots.length) { //no agrega un robort si esta lleno el array en si llega al maximo  y los que se pongan despues se descartan 
             robots[cantidadRobots] = robot;
             cantidadRobots++;
         } else {
@@ -94,6 +94,7 @@ public class JuegoBatalla {
             } 
         } 
     }
+    //muetra cual a sido el robot ganador 
         public void mostrarGanador() {
             if (cantidadRobots == 1) {
                 System.out.println( robots[0].getNombre() + "¡Has emergido victorioso de la batalla, alzado como el triunfador!");
@@ -101,18 +102,18 @@ public class JuegoBatalla {
             System.out.println("La batalla terminó, pero nadie vivió para contarlo. ¿Ganó la crueldad de los algoritmos? ");
         }
     }
-
+    //main del inicio de la batalla
     public  static void main(String[] args) {
-        int cantidadMaxima = 6;
+        int cantidadMaxima = 6; //capacidad maxima de robot
         JuegoBatalla juego = new JuegoBatalla(cantidadMaxima);
-
+        //genera los robot
         juego.anadirRobort(new Robot("Leo", 90, 17));
         juego.anadirRobort(new Robot("Daniel", 85, 16));
         juego.anadirRobort(new Robot("Pablo", 75, 15));
         juego.anadirRobort(new Robot("Randal", 60, 20));
         juego.anadirRobort(new Robot("Jose", 92, 10));
         juego.anadirRobort(new Robot("Olman", 89, 12));
-        
+        //inicia la batalla
         juego.iniciarBatalla();
     }
 }
